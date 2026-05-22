@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Премиальный шаблон сайта для салона красоты, барбершопа, nail-студии или сферы услуг с интеграцией Yclients." />
+    <title>Maison Noir | Beauty & Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#070707",
+              coal: "#111111",
+              graphite: "#1b1b1d",
+              champagne: "#d8b36a",
+              pearl: "#f4efe6"
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              display: ["Cormorant Garamond", "Georgia", "serif"]
+            },
+            boxShadow: {
+              glow: "0 0 55px rgba(216, 179, 106, 0.18)"
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+        background: #f7f0e7;
+      }
+
+      body,
+      .text-pearl,
+      .text-white,
+      [class*="text-white/"] {
+        color: #17130f !important;
+      }
+
+      [class*="border-white/"] {
+        border-color: rgba(23, 19, 15, 0.12) !important;
+      }
+
+      .bg-ink,
+      header {
+        background-color: rgba(247, 240, 231, 0.9) !important;
+      }
+
+      [class*="bg-black"],
+      [class*="bg-white/"] {
+        background-color: rgba(255, 255, 255, 0.76) !important;
+      }
+
+      .fixed.inset-0.-z-10 {
+        background: radial-gradient(circle at 12% 10%, rgba(216, 179, 106, 0.24), transparent 30%),
+          linear-gradient(135deg, #f7f0e7 0%, #ffffff 58%, #eee3d5 100%) !important;
+      }
+
+      .ms_booking.bg-champagne,
+      .bg-champagne {
+        color: #17130f !important;
+      }
+
+      @media (max-width: 640px) {
+        h1 {
+          font-size: clamp(3rem, 15vw, 4.4rem) !important;
+          line-height: 0.95 !important;
+        }
+
+        h2 {
+          font-size: clamp(2.25rem, 10vw, 3.1rem) !important;
+          line-height: 1.02 !important;
+        }
+
+        section {
+          scroll-margin-top: 88px;
+        }
+
+        .price-tabs {
+          max-width: calc(100vw - 2.5rem);
+          border-radius: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-ink text-pearl antialiased">
+    <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(216,179,106,.17),transparent_35%),linear-gradient(135deg,#070707_0%,#151515_45%,#090909_100%)]"></div>
+
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/75 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Главная навигация">
+        <a href="#" class="font-display text-2xl font-bold tracking-wide text-white">Maison Noir</a>
+        <button class="menu-toggle inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white md:hidden" aria-label="Открыть меню" aria-expanded="false">
+          <span class="h-0.5 w-5 bg-current before:block before:h-0.5 before:w-5 before:-translate-y-1.5 before:bg-current after:block after:h-0.5 after:w-5 after:translate-y-1 after:bg-current"></span>
+        </button>
+        <div class="nav-menu hidden items-center gap-8 text-sm text-white/70 md:flex">
+          <a class="transition hover:text-champagne" href="#about">О нас</a>
+          <a class="transition hover:text-champagne" href="#price">Прайс</a>
+          <a class="transition hover:text-champagne" href="#masters">Мастера</a>
+          <a class="transition hover:text-champagne" href="#contacts">Контакты</a>
+          <a href="#yclients" class="ms_booking rounded-full bg-champagne px-5 py-3 font-semibold text-black transition hover:bg-white">Записаться</a>
+        </div>
+      </nav>
+      <div class="mobile-panel hidden border-t border-white/10 bg-ink px-5 py-5 md:hidden">
+        <div class="flex flex-col gap-4 text-sm text-white/75">
+          <a href="#about">О нас</a>
+          <a href="#price">Прайс</a>
+          <a href="#masters">Мастера</a>
+          <a href="#contacts">Контакты</a>
+          <a href="#yclients" class="ms_booking rounded-full bg-champagne px-5 py-3 text-center font-semibold text-black">Записаться</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative min-h-screen overflow-hidden pt-28">
+        <img class="absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.38]" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=2200&q=85" alt="Премиальный салон красоты в темной эстетике" />
+        <div class="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-black/25"></div>
+        <div class="mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.08fr_.92fr] lg:px-8">
+          <div>
+            <p class="mb-5 text-xs font-semibold uppercase tracking-[0.45em] text-champagne">Beauty / Barbershop / Nails</p>
+            <h1 class="max-w-4xl font-display text-6xl font-bold leading-[0.92] text-white sm:text-7xl lg:text-8xl">Студия, где сервис выглядит дорого.</h1>
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-white/72">Готовый адаптивный шаблон для салонов, барбершопов, brow- и nail-студий. Темный премиальный визуал, интерактивный прайс и запись через Yclients поверх сайта.</p>
+            <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+              <a href="#yclients" class="ms_booking rounded-full bg-champagne px-8 py-4 text-center font-bold text-black shadow-glow transition hover:bg-white">Записаться онлайн</a>
+              <a href="#price" class="rounded-full border border-white/15 px-8 py-4 text-center font-semibold text-white transition hover:border-champagne hover:text-champagne">Смотреть услуги</a>
+            </div>
+          </div>
+          <div class="relative hidden lg:block">
+            <div class="absolute -inset-8 rounded-full border border-champagne/20"></div>
+            <div class="border border-white/10 bg-black/35 p-5 backdrop-blur-xl">
+              <img class="aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85" alt="Мастер салона делает укладку клиентке" />
+              <div class="mt-5 grid grid-cols-3 gap-3 text-center">
+                <div class="border border-white/10 p-4">
+                  <b class="block text-2xl text-white">4.9</b>
+                  <span class="text-xs text-white/55">рейтинг</span>
+                </div>
+                <div class="border border-white/10 p-4">
+                  <b class="block text-2xl text-white">12</b>
+                  <span class="text-xs text-white/55">мастеров</span>
+                </div>
+                <div class="border border-white/10 p-4">
+                  <b class="block text-2xl text-white">7</b>
+                  <span class="text-xs text-white/55">дней</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="border-y border-white/10 bg-black/35 py-24">
+        <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.35em] text-champagne">О нас</p>
+            <h2 class="mt-4 font-display text-5xl font-semibold text-white">Меньше шума. Больше вкуса, точности и заботы.</h2>
+          </div>
+          <div class="grid gap-5 text-white/70 sm:grid-cols-2">
+            <p class="leading-8">Шаблон держит фокус на главном: атмосфера, доверие, понятные услуги и быстрый путь к записи. Подойдет для beauty, wellness, grooming и локальных сервисов.</p>
+            <p class="leading-8">Каждый блок легко переименовать под нишу: от барбершопа до косметологии. Цвета, цены, мастера и ID Yclients меняются без сборки и фреймворков.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="price" class="py-24">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.35em] text-champagne">Прайс</p>
+              <h2 class="mt-4 font-display text-5xl font-semibold text-white">Услуги без лишнего текста</h2>
+            </div>
+            <div class="price-tabs flex gap-2 overflow-x-auto rounded-full border border-white/10 bg-white/[0.03] p-1">
+              <button class="tab active rounded-full px-5 py-3 text-sm font-semibold" data-category="hair">Волосы</button>
+              <button class="tab rounded-full px-5 py-3 text-sm font-semibold" data-category="nails">Ногти</button>
+              <button class="tab rounded-full px-5 py-3 text-sm font-semibold" data-category="care">Уход</button>
+            </div>
+          </div>
+          <div class="price-list mt-10 grid gap-4 md:grid-cols-2"></div>
+        </div>
+      </section>
+
+      <section id="masters" class="border-y border-white/10 bg-white/[0.03] py-24">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.35em] text-champagne">Команда</p>
+              <h2 class="mt-4 font-display text-5xl font-semibold text-white">Мастера, к которым возвращаются</h2>
+            </div>
+            <a href="#yclients" class="ms_booking w-fit rounded-full border border-champagne/40 px-6 py-3 font-semibold text-champagne transition hover:bg-champagne hover:text-black">Выбрать мастера</a>
+          </div>
+          <div class="grid gap-5 md:grid-cols-3">
+            <article class="group border border-white/10 bg-black/40 p-4">
+              <img class="aspect-[4/5] w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=85" alt="Мастер Анна" />
+              <div class="pt-5">
+                <h3 class="font-display text-3xl text-white">Анна Морель</h3>
+                <p class="mt-2 text-sm text-white/55">Колорист / hair expert</p>
+                <a href="#yclients" class="ms_booking mt-5 inline-flex rounded-full bg-white px-5 py-3 text-sm font-bold text-black transition hover:bg-champagne">Записаться</a>
+              </div>
+            </article>
+            <article class="group border border-white/10 bg-black/40 p-4">
+              <img class="aspect-[4/5] w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=85" alt="Мастер Марк" />
+              <div class="pt-5">
+                <h3 class="font-display text-3xl text-white">Марк Лоран</h3>
+                <p class="mt-2 text-sm text-white/55">Барбер / grooming</p>
+                <a href="#yclients" class="ms_booking mt-5 inline-flex rounded-full bg-white px-5 py-3 text-sm font-bold text-black transition hover:bg-champagne">Записаться</a>
+              </div>
+            </article>
+            <article class="group border border-white/10 bg-black/40 p-4">
+              <img class="aspect-[4/5] w-full object-cover grayscale transition duration-500 group-hover:grayscale-0" src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=85" alt="Мастер София" />
+              <div class="pt-5">
+                <h3 class="font-display text-3xl text-white">София Найт</h3>
+                <p class="mt-2 text-sm text-white/55">Nail artist / spa care</p>
+                <a href="#yclients" class="ms_booking mt-5 inline-flex rounded-full bg-white px-5 py-3 text-sm font-bold text-black transition hover:bg-champagne">Записаться</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacts" class="px-5 py-12 lg:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col justify-between gap-6 border-t border-white/10 pt-8 text-sm text-white/55 md:flex-row">
+        <p>Maison Noir, премиальный шаблон для сферы услуг.</p>
+        <p>+7 999 000-00-00 · hello@example.ru · ежедневно 10:00-22:00</p>
+      </div>
+    </footer>
+
+    <!-- Yclients: замените 93432 на ID вашей формы/филиала. Кнопки работают через class="ms_booking" и href="#yclients". -->
+    <script async src="https://w93432.yclients.com/widgetJS" charset="UTF-8"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
